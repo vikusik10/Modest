@@ -117,9 +117,6 @@ header {
     align-items: center;
     padding: 15px;
 }
-nav {
-    overflow-x: auto;
-}
 .menu {
     display: flex;
     justify-content: space-between;
@@ -298,16 +295,25 @@ nav {
 .li {
     position: relative;
 }
-.number::before {
-    height: 50px;
-    width: 50px;
-    background-color: #23a7b3;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 20px;
+.list {
+    margin-top: 65px;
+    .list-body {
+        display: flex;
+        .number {
+            height: 50px;
+            width: 50px;
+            background-color: #23a7b3;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            span {
+                width: 50px;
+                text-align: center;
+            }
+        }
+    }
 }
 .team {
     display: flex;
@@ -484,13 +490,31 @@ nav {
             color: #8d8f92;
         }
         padding: 30px;
+        .form-block-text {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
         input {
-            background-color: #8d8f92;
-            border-radius: 10px;
+            background-color: #eaeef1;
+            border: 1px solid #eaeef1;
+            border-radius: 10%;
+            
+            .text {
+                height: 45px;
+            }
+            .textarea {
+                height: 160px;
+            }
         }
         .send-message {
             background-color: #23a7b3;
             color: #ffffff;
+            border: 1px solid #23a7b3;
+            border-radius: 8%;
+            .section-name-form-button {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -538,14 +562,13 @@ footer{
                     transform: rotate(-45deg);
                 }
                 &:nth-child(3) {
-                    
                     transform: scale(0);
                 }
               }  
         }
         
     }
-    nav {
+    .navigation {
         position: fixed;
         top: 0;
         right: 0;
@@ -553,14 +576,18 @@ footer{
         max-width: 280px;
         width: 280px;
         transform: translateX(150%);
-         opacity: 0;
-         visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
          
         &.active-menu {
             visibility: visible;
              opacity: 1;
              transform: translateX(0);
-             top: 50px;
+             top: 40px;
+             background-color: #1d2126;
+             ul {
+                flex-direction: column;
+             }
         }
     }
 }

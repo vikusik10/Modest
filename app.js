@@ -1,5 +1,5 @@
 let mobileMenu = document.querySelector(".nav-mobile-menu");
-let mainMenu = document.querySelector("nav")
+let mainMenu = document.querySelector(".navigation")
 
 mobileMenu.addEventListener("click", function() {
     mobileMenu.classList.toggle("active-menu")
